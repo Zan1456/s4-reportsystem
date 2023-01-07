@@ -1,0 +1,458 @@
+
+@font-face {
+    font-family: ios;
+    src: url('ios.ttf');
+}
+
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    outline: unset;
+}
+
+.report-container {
+    position: relative;
+    margin: auto;
+    width: 500px;
+    height: 600px;
+    margin-top: 10%;
+    color: rgb(255, 255, 255);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 10px;
+    background: linear-gradient(to right bottom, rgb(0, 127, 255), rgb(0, 89, 178) 120%);
+    box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px, rgb(0 0 0 / 4%) 0px 10px 10px;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.fa-circle-xmark {
+    position: absolute!important;
+    right: 5%;
+    top: 5%;
+}
+
+.img {
+    width: -webkit-fill-available;
+    height: 250px;
+    position: relative;
+    top: 4vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    background-color: rgb(0, 30, 60);
+    color: rgb(255, 255, 255);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 10px;
+    border: 1px solid rgb(30, 73, 118);
+}
+
+.img i {
+    --fa-animation-duration: 3s;
+    position: relative;
+    top: 40%;
+    font-size: 4vh;
+}
+
+.report-container p {
+    line-height: 1.2;
+    font-size: 1.25rem;
+    font-weight: 500;
+    position: absolute;
+    left: 5%;
+    top: 1%;
+    text-shadow: 0px 0px 20px white;
+}
+
+
+.content {
+    width: -webkit-fill-available;
+    height: 250px;
+    position: relative;
+    top: 5vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+button {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(144, 202, 249);
+    box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+}
+
+
+button:hover {
+    background: rgb(0, 30, 60);
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+.content input[type=number] {
+    width: -webkit-fill-available;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(0, 30, 60);
+    color: rgb(255, 255, 255);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border: 1px solid rgb(30, 73, 118);
+}
+
+.content textarea {
+    width: -webkit-fill-available;
+    font-size: 18px;
+    height: 150px;
+    margin-top: 10px;
+    background-color: rgb(0, 30, 60);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(30, 73, 118);
+    resize: none;
+}
+
+.content textarea::-webkit-scrollbar { display: none; }
+
+
+.reports {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    min-width: 300px;
+    min-height: 500px;
+}
+
+.report {
+    position: relative;
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    margin-top: 10%;
+    color: rgb(255, 255, 255);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 10px;
+    background: linear-gradient(to right bottom, rgb(0, 127, 255), rgb(0, 89, 178) 120%);
+    box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px, rgb(0 0 0 / 4%) 0px 10px 10px;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.report p {
+    position: absolute;
+    top: 5%;
+    text-shadow: 0px 0px 20px white;
+}
+
+.report .repimg {
+    width: -webkit-fill-available;
+    margin-right: 5vh;
+    height: 120px;
+    background: rgb(0, 30, 60);
+    position: absolute;
+    top: 25%;
+    border-radius: 10px;
+}
+
+.report b {
+    position: absolute;
+    bottom: 10%;
+}
+
+.admin-hub {
+    margin: auto;
+    width: 40%;
+    height: 75%;
+    color: #ffffff;
+    background: #2c2c2c;
+    margin-top: 7%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.admin-hub .header {
+    position: relative;
+    width: -webkit-fill-available;
+    height: 50px;
+    color: #ffffff;
+    background: #414141;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.admin-hub .header i {
+    position: absolute;
+    right: 2.5%;
+    top: 27.5%;
+    font-size: 28px;
+    transition: .2s;
+}
+
+.admin-hub .header h1 { 
+    font-family: 'ios';
+    position: absolute;
+    top: 22%;
+    left: 1.5%;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-hub .altcon {
+    position: relative;
+    width: -webkit-fill-available;
+    height: 85%;
+    color: #ffffff;
+    background: #414141;
+    margin-top: 1%;
+    border-radius: 20px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.admin-hub .header i:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+.repo {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #ffffff;
+    background: #2c2c2c;
+    border-radius: 15px;
+    margin-top: 5px;
+    transition: .2s;
+    overflow: hidden;
+}
+
+.altcon .repbilgi {
+    position: relative;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.altcon::-webkit-scrollbar {
+    display: none;
+}
+
+.repo:hover {
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.repo i, .repbilgi i {
+    position: absolute;
+    margin-top: 1.2%;
+    left: 2%;
+    font-size: 24px;
+    color: #ff004c;
+    z-index: 1;
+}
+
+.repo p, .repbilgi p {
+    font-family: 'ios';
+    position: absolute;
+    margin-left: 7%;
+    margin-top: 1.5%;
+    font-weight: 600;
+    z-index: 1;
+    color: white;
+    text-shadow: 0px 0px 12px black;
+}
+
+.repo_img {
+    width: 30%;
+    height: -webkit-fill-available;
+    background: url(https://cdn.discordapp.com/attachments/943752271043366935/997030323680452668/screenshot.png);
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    background-size: cover;
+    border-top-right-radius: 30px;
+}
+
+select {
+    position: absolute;
+    right: 2%;
+    margin-top: 1%;
+    min-width: 120px;
+    border-radius: 30px;
+    border: unset;
+    padding: 4px;
+    font-family: 'ios';
+}
+ 
+
+.repo button {
+    bottom: unset;
+    margin-top: 7%;
+    right: 2%;
+    border-radius: 30px;
+    background: #f2f2f2;
+}
+
+.repo button:hover {
+    color: black;
+    background: white;
+}
+
+.repo h1, .repbilgi h1 {
+    position: absolute;
+    left: 34%;
+    margin-top: 1%;
+    z-index: 1;
+    font-size: 18px;
+    font-family: 'ios';
+}
+
+.repo textarea, .repbilgi textarea {
+    width: 250px;
+    height: 60px;
+    margin-top: 5%;
+    position: absolute;
+    left: 34%;
+    font-size: 14px;
+    font-family: 'ios';
+    font-weight: 100;
+    background: transparent;
+    border:none;
+    resize: none;
+}
+
+.rep_video {
+    position: absolute;
+    width: -webkit-fill-available;
+    height: 550px;
+    background: #414141;
+    bottom: 0;
+    border-radius: 20px;
+}
+
+.rep_video i {
+    position: relative;
+    color: white;
+    font-size: 50px;
+    margin-top: 20%;
+    --fa-animation-duration: 3s;
+}
+
+.repbilgi table {
+    position: relative;
+    top: 30%;
+    width: -webkit-fill-available;
+    text-align: center;
+}
+
+.rep_points {
+    position: absolute;
+    right: 0;
+    padding-top: 5px;
+    width: 15%;
+    height: 170px;
+}
+
+input {
+    position: relative;
+    top: 30%;
+    height: 45px;
+    font-size: 24px;
+    width: 50px;
+    text-align: center;
+    border-radius: 30px;
+    border: unset;
+    appearance: none;
+    font-family: 'ios';
+    background: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fa-circle-caret-down {
+    right: 0%!important;
+    bottom: 12%!important;
+    font-size: 40px!important;
+    --fa-primary-color: white;
+    color: #00ff2d!important;
+}
+
+.fa-circle-caret-up {
+    right: 0%!important;
+    font-size: 40px!important;
+    --fa-primary-color: white;
+}
+
+.rep_x_box {
+    position: absolute;
+    top: 1%;
+    right: 14%;
+    text-align: center;
+    width: 13vh;
+}
+
+.rep_x_box a {
+    width: -webkit-fill-available;
+    text-decoration: none;
+    background: #565656;
+    display: block;
+    font-size: 1.5vh;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px black;
+    margin-bottom: 10%;
+    padding: 7px;
+    font-family: 'ios';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.rep_x_box a:hover {
+  transform: scale(1.1);
+}
+
+.rep_x_box i {
+    margin-top: unset;
+    margin-bottom: 1%;
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 2px;
+}

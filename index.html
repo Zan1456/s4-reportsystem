@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>s4:reportsystem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@18657a9/css/all.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="reports"></div>
+
+    <div class="admin-hub" style="display: none;">
+        <div class="header">
+            <h1>Report rendszer</h1>
+            <i class="fa-light fa-chevron-left" style="right: 8%;" onclick="__back__();"></i>
+            <i class="fa-light fa-xmark" onclick="__close__();"></i>
+        </div>
+
+        <div class="altcon">
+            <div class="repbilgi">
+                <i class="fa-solid fa-circle" id="col_1" ></i>
+                <p>#123123123' case no.</p>
+                <h1>Jelentett játékos ID: 1</h1>
+                <textarea disabled style="color: #ffffff !important;">testetestetetetestetestetest</textarea>
+                <div class="repo_img" style="height: 100px; bottom: unset;  border-radius: 20px;"></div>
+
+                <div class="rep_points" align=center>
+                    <i class="fa-duotone fa-circle-caret-up"></i>
+                    <input type="number" value="0" disabled />
+                    <i class="fa-duotone fa-circle-caret-down"></i>
+                </div>
+
+                <table>
+                    <tr>
+                      <th>Név</th>
+                      <th>Jelentett játékos ID</th>
+                      <th>Beküldő ID</th>
+                      <th>Idő</th>
+                    </tr>
+                    <tr>
+                      <td>0resmon.tebex.io</td>
+                      <td>Maria Anders</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                    </tr>
+                  
+                  </table>
+                <div class="rep_video" align="center">
+                    <i class="fa-duotone fa-spinner-third fa-spin"></i>
+                </div>
+            </div>
+            <!-- <div class="repo">
+                <i class="fa-solid fa-circle" id="col_1" ></i>
+                <p>#123123123' case no.</p>
+                <h1>Reported player id: 1</h1>
+                <textarea disabled style="color: #ffffff !important;">testetestetetetestetestetest</textarea>
+                <div class="repo_img"></div>
+                <select onchange="durum_degis(this);" data-col="1">
+                    <option value="#ff004c">Megoldatlan</option>
+                    <option value="#ffaa00">Folyamatban</option>
+                    <option value="#00ff62">Megoldva</option>
+                </select>   
+                <button>Megnyitás</button>
+            </div> -->
+
+        </div>
+    </div>
+
+    <div class="report-container" style="display: none;">
+ 
+        <p>Jelentés készítése</p>
+
+        <i class="fa-duotone fa-circle-xmark"></i>
+
+        <div class="img" align="center">
+            <i class="fa-duotone fa-spinner-third fa-fw fa-2x fa-spin" ></i>
+        </div>
+
+        <div class="content">
+            <input type="number" style="top: 1%;" placeholder="Jelentett játékos ID">
+            <textarea cols="30" rows="10">Írd le a részleteket...</textarea>
+        </div>
+
+        <button><i class="fa-duotone fa-flag"></i>&nbsp;&nbsp;Elküldés</button>
+
+    </div>
+
+    <script src="s4.js"></script>
+ 
+</body>
+</html>
